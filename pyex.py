@@ -14,9 +14,10 @@ if "run" not in st.session_state:
     st.session_state.run = False
 
 # ---------------- TITLE ----------------
-st.title("🚗 Autonomous Accident Prevention System (ADAS)")
+st.title("🏎️ Autonomous Accident Prevention System (AAPS)")
 
 st.markdown("""
+            
 ### 🔐 About the System
 An **Autonomous Accident Prevention System (ADAS)** is an AI-powered safety system
 designed to **detect obstacles**, **warn the driver**, and **simulate automatic braking**
@@ -42,8 +43,8 @@ camera_index = st.sidebar.selectbox(
 st.sidebar.info("""
 ### Alert Logic
 🟢 SAFE – Object far  
-🟡 WARNING – Object close  
-🔴 DANGER – Object very close  
+❗ WARNING – Object close  
+⚠️ DANGER – Object very close  
 ➡️ AUTO BRAKE simulated
 """)
 
@@ -51,11 +52,11 @@ st.sidebar.info("""
 col1, col2 = st.columns(2)
 
 with col1:
-    if st.button("▶️ Start ADAS"):
+    if st.button("▶️ Start AAPA"):
         st.session_state.run = True
 
 with col2:
-    if st.button("⏹️ Stop ADAS"):
+    if st.button("⏹️ Stop AAPA"):
         st.session_state.run = False
 
 # ---------------- LOAD MODEL ----------------
@@ -136,7 +137,7 @@ st.markdown("""
 # ---------------- FOOTER ----------------
 st.markdown("---")
 st.markdown("""
-### 🚀 Future Enhancements
+### 🤖 Future Enhancements
 • Speed limit detection  
 • Real braking hardware integration  
 • Vehicle number recognition  
